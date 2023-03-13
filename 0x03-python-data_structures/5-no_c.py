@@ -6,4 +6,3 @@ def no_c(my_string):
             continue
         result += z
     return result
-
