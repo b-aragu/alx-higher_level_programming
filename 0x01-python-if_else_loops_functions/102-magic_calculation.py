@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-# byte code 
+# byte code
 
 
 def magic_calculation(a, b, c):
