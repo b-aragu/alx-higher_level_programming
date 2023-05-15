@@ -5,10 +5,10 @@
 
 
 def print_matrix_integer(matrix=[[]]):
-    for row in matrix:
-        for element in row:
-            if row[len(row) - 1] == element:
-                print("{}".format(row[len(row) - 1]), end="")
-            else:
-                print("{}".format(element), end=" ")
-        print()
+    for row in range(len(matrix)):
+        for column in range(len(matrix[row])):
+            print("{:d}".format(matrix[row][column]), end=" ")
+            if column != (len(matrix[row]) - 1):
+                print("", end="")
+
+        print("")
