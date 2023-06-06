@@ -1,6 +1,6 @@
 # Test-Driven Development (TDD) in Python
 
-![TDD Cycle](https://i.imgur.com/1LZvvKT.png)
+![TDD Cycle](https://www.whizlabs.com/wp-content/uploads/2016/04/TDD.png)
 
 ## Introduction
 
