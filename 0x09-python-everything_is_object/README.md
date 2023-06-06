@@ -6,15 +6,15 @@ In Python, the philosophy of "Everything is an Object" is a fundamental principl
 
 In Python, when we create a value, it is stored in memory and referred to by a variable. However, it's important to understand that the variable is not the actual value but rather a reference to the object in memory. This is different from some other programming languages where variables directly hold the values.
 
-```python
+```
 # Example: Variables referencing objects
 x = 42
 y = "Hello"
+```
 In the above example, x and y are variables that reference the objects 42 and "Hello", respectively. Both values are objects in Python.
 
 ### Object Attributes and Methods
 Objects in Python have attributes and methods associated with them. Attributes are properties or characteristics of an object, while methods are functions that can be performed on the object. You can access attributes and call methods using the dot notation.
-
 
 #### Example: Accessing object attributes and calling methods
 ```my_list = [1, 2, 3]
@@ -26,8 +26,6 @@ In the example above, `my_list` is an object of the list class. We access the `_
 ### Object Types and Classes
 Every object in Python belongs to a specific type, or class, which defines the behavior and properties of the object. Python provides a rich set of built-in classes, such as int, str, list, and dict, but you can also define your own custom classes.
 
-python
-Copy code
 #### Example: Creating a custom class
 ```
 class Person:
