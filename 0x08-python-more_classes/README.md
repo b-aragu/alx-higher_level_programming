@@ -144,9 +144,9 @@ class Car:
         self.make = make
         self.model = model
 
-my_car = Car("Toyota", "Corolla")
-my_car.color = "Red"  # Dynamically adding a new attribute
-print(my_car.color)  # Output: Red
+my_ car = Car("Toyota", "Corolla")
+my_ car.color = "Red"  # Dynamically adding a new attribute
+print(my_ car.color)  # Output: Red
 ```
 ### Binding Attributes
 Attributes can be bound to both objects and classes. Bound attributes are accessed using dot notation and are resolved based on the object's or class's attribute lookup.
@@ -162,10 +162,11 @@ class Car:
         self.make = make
         self.model = model
 
-my_car = Car("Toyota", "Corolla")
+my_ car = Car("Toyota", "Corolla")
 
 print(Car.__dict__)  # Output: {'__module__': '__main__', 'wheels': 4, '__init__': <function Car.__init__ at 0x000001>, ...}
-print(my_car.__dict__)  # Output: {'make': 'Toyota', 'model': 'Corolla'}```
+print(my_ car.__dict__)  # Output: {'make': 'Toyota', 'model': 'Corolla'}
+```
 ### Attribute Lookup
 When accessing an attribute on an object or class, Python performs an attribute lookup. It searches for the attribute in the object's or class's namespace, including inherited attributes.
 
