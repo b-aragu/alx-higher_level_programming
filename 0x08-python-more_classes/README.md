@@ -122,3 +122,63 @@ Class methods are defined within a class and operate on the class itself rather 
         return cls.wheels
 
 print(Car.get_wheels())  # Output: 4
+```
+## Static Methods
+
+Static methods are defined within a class but do not operate on instances or the class itself. They are independent of the class and can be called without instantiating the class.
+
+```
+class MathUtils:
+    @staticmethod
+    def add_numbers(x, y):
+        return x + y
+
+result = MathUtils.add_numbers(5, 3)
+print(result)  # Output: 8```
+### Dynamically Creating Attributes
+In Python, attributes can be dynamically created for existing instances of a class by simply assigning a value to a new attribute name.
+
+```
+class Car:
+    def __init__(self, make, model):
+        self.make = make
+        self.model = model
+
+my_car = Car("Toyota", "Corolla")
+my_car.color = "Red"  # Dynamically adding a new attribute
+print(my_car.color)  # Output: Red
+```
+### Binding Attributes
+Attributes can be bound to both objects and classes. Bound attributes are accessed using dot notation and are resolved based on the object's or class's attribute lookup.
+
+### `__dict__` of a Class and an Instance
+The `__dict__` attribute of a class contains a dictionary that holds the attributes defined within the class. For an instance,`__dict__` contains the instance's attributes along with the attributes inherited from its class.
+
+```
+class Car:
+    wheels = 4  # Class attribute
+
+    def __init__(self, make, model):
+        self.make = make
+        self.model = model
+
+my_car = Car("Toyota", "Corolla")
+
+print(Car.__dict__)  # Output: {'__module__': '__main__', 'wheels': 4, '__init__': <function Car.__init__ at 0x000001>, ...}
+print(my_car.__dict__)  # Output: {'make': 'Toyota', 'model': 'Corolla'}```
+### Attribute Lookup
+When accessing an attribute on an object or class, Python performs an attribute lookup. It searches for the attribute in the object's or class's namespace, including inherited attributes.
+
+### Using the getattr() Function
+The getattr() function allows retrieving the value of an attribute dynamically by providing the object and attribute name as arguments. It returns the attribute value if found or raises an exception if the attribute is not found.
+
+```
+class Car:
+    def __init__(self, make, model):
+        self.make = make
+        self.model = model
+
+my_car = Car("Toyota", "Corolla")
+make = getattr(my_car, "make")
+print(make)  # Output: Toyota
+```
