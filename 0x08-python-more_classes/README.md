@@ -144,8 +144,8 @@ class Car:
         self.make = make
         self.model = model
 
-my_ car = Car("Toyota", "Corolla")
-my_ car.color = "Red"  # Dynamically adding a new attribute
+mycar = Car("Toyota", "Corolla")
+mycar.color = "Red"  # Dynamically adding a new attribute
 print(my_ car.color)  # Output: Red
 ```
 ### Binding Attributes
@@ -162,10 +162,10 @@ class Car:
         self.make = make
         self.model = model
 
-my_ car = Car("Toyota", "Corolla")
+mycar = Car("Toyota", "Corolla")
 
 print(Car.__dict__)  # Output: {'__module__': '__main__', 'wheels': 4, '__init__': <function Car.__init__ at 0x000001>, ...}
-print(my_ car.__dict__)  # Output: {'make': 'Toyota', 'model': 'Corolla'}
+print(mycar.__dict__)  # Output: {'make': 'Toyota', 'model': 'Corolla'}
 ```
 ### Attribute Lookup
 When accessing an attribute on an object or class, Python performs an attribute lookup. It searches for the attribute in the object's or class's namespace, including inherited attributes.
@@ -179,7 +179,7 @@ class Car:
         self.make = make
         self.model = model
 
-my_car = Car("Toyota", "Corolla")
-make = getattr(my_car, "make")
+mycar = Car("Toyota", "Corolla")
+make = getattr(mycar, "make")
 print(make)  # Output: Toyota
 ```
