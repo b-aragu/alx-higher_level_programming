@@ -424,5 +424,3 @@ Class methods are defined within a class and operate on the class itself rather 
         return cls.wheels
 
 print(Car.get_wheels())  # Output: 4
-```
-
