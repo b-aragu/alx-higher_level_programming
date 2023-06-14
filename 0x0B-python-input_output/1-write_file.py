@@ -1,7 +1,6 @@
 #!/usr/bin/python3
-# 0-read_file.py
-
-"""text file reading function"""
+# 3-write_file.py
+"""Defines a file-writing function."""
 
 
 def write_file(filename="", text=""):
@@ -13,6 +12,5 @@ def write_file(filename="", text=""):
     Returns:
         The number of characters written.
     """
-    with open(filename, encoding="utf-8") as f:
-        return f.write("text")
-baragu@baragu254:~/Documents/ALx/
+    with open(filename, "w", encoding="utf-8") as f:
+        return f.write(text)
