@@ -49,3 +49,5 @@ The "Everything is an Object" principle provides several benefits in Python:
 Python's "Everything is an Object" concept promotes a unified and powerful programming model, enabling developers to write clean, maintainable, and efficient code.
 
 Remember, the examples provided here are just a glimpse of the concept. Python's object-oriented nature is extensive, and exploring it further will unlock the language's full potential.
+~ baragu
+
