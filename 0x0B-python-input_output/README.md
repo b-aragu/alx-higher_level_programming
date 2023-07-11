@@ -41,7 +41,7 @@ x = [1, 'simple', 'list']
 json.dumps(x)
 ```
 
-### Raising and handling multiple unrelated exceptions
+### Raisng and handling multiple unrelated exceptions
 - `ExceptionGroup` wraps a list of exceptions instances so they can be raised together
 - `except*` selectively handle only the exception in the group that match a certain type.
 
