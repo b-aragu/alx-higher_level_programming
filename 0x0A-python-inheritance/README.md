@@ -1,1 +1,1 @@
-nheritance
+Inheritance
