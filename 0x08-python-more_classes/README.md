@@ -1,3 +1,4 @@
+## OOP (CLASSES)
 - It is a programming paradigm that uses classes and objects to organize code. Objects represents real world entities and classes define their structure and behaviours.
 - Attribute- a piece of data associated with an object (instance of the class ), a data member of a class 
 - method - A function defined within a class that can operates on the class attribute and methods within those methods
