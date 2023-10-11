@@ -6,7 +6,7 @@
 
 def append_write(filename="", text=""):
     """
-A function that appends a string at the end of a text file (UTF8) 
+A function that appends a string at the end of a text file (UTF8)
     args:
         filename (str) - name of the file
         text (str) - text to be added
