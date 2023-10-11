@@ -26,6 +26,7 @@ Public method def to_json(self):that retrieve a dict repr of a Student instance
                 all(type(ele) == str for ele in attrs)):
             return {k: getattr(self, k) for k in attrs if hasattr(self, k)}
         return self.__dict__
+
     def reload_from_json(self, json):
         """Replace all attributes of the Student.
 
