@@ -2,6 +2,7 @@
 # 3-to_json_string.py
 
 """To  Json STRING"""
+import json
 
 
 def to_json_string(my_obj):
@@ -10,6 +11,4 @@ def to_json_string(my_obj):
     args:
         my_obj - the object rep
     """
-    import json
-    f = json.dumps(my_obj)
-    return f
+    return json.dumps(my_obj)
