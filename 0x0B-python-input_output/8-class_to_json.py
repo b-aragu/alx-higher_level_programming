@@ -7,7 +7,7 @@ import json
 def class_to_json(obj):
     """
 returns dict desription with simple data structure for Json serialization
-args: 
+args:
     obj - an instance of a class
 
     """
