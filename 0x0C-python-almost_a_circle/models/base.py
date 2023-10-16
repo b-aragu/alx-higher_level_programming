@@ -13,7 +13,7 @@ class constructor:
     def __init__(self, id=none)
     """
     __nb_objects = 0
-    
+
     def __init__(self, id=None):
         """the class constructor"""
         if id is not None:
