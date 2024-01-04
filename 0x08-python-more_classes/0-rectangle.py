@@ -1,10 +1,8 @@
-#!usr/bin/python3
+#!/usr/bin/python3
 
-""" Write an empty rectangle that defines a rectangle """
+"""Write an empty class Rectangle that defines a rectangle:"""
 
 
 class Rectangle:
-    """
-    Defines a rectangle
-    """
+    """Write an empty class Rectangle that defines a rectangle:"""
     pass
