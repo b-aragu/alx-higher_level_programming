@@ -131,7 +131,8 @@ print(matrix[1][1])  # Output: 5
 For loops work seamlessly with lists:
 ```python
 for horseman in horsemen:
-    print(h)
+    print(horseman)
+```
 
 -------
 
