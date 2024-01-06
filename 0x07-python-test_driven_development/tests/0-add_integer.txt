@@ -1,0 +1,42 @@
+0-add_integer.txt
+--------
+A doctest for integer addition 
+-----------
+
+>>> add_integer = __import__('0-add_integer').add_integer
+
+a and b must be integers or floats, otherwise raise a TypeError exception with the message a must be an integer or b must be an integer
+>>> add_integer(4, "best")
+Traceback (most recent call last):
+	...
+TypeError: b must be an integer
+
+>>> add_integer("best", 89)
+Traceback (most recent call last):
+        ...
+TypeError: a must be an integer
+
+you can pass just one value b is initialised by default
+
+>>> add_integer(2)
+100
+
+>>> add_integer("best")
+Traceback (most recent call last):
+        ...
+TypeError: a must be an integer
+
+Floats are first typecasted to int if passed
+>>> add_integer(100.3, -2)
+98
+
+if everything is okay it returns addition
+>>> add_integer(2, 0)
+2
+
+>>> add_integer(9, 10)
+19
+
+>>> add_integer(0)
+98
+
