@@ -1,0 +1,16 @@
+tests/5-text_indentation.txt
+---------
+Text Indentation
+---------
+
+a function that prints a text with 2 new lines after each of these characters: ., ? and :
+
+>>> text_indentation = __import__('5-text_indentation').text_indentation
+>>> text_indentation("baragu")
+baragu
+
+if text is not string it raises type error
+>>> text_indentation(9)
+Traceback (most recent call last):
+	...
+TypeError: text must be a string
