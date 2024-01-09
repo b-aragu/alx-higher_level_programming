@@ -13,4 +13,3 @@ class MyInt(int):
     def __ne__(self, other):
         """ override the != """
         return super().__eq__(other)
-
