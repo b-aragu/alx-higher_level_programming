@@ -2,7 +2,6 @@
 # 8-class_to_json.py
 
 """ class to JSON """
-import json
 
 
 def class_to_json(obj):
