@@ -20,11 +20,12 @@ class Rectangle(Base):
         """Override to return [Rectangle] (<id>) <x>/<y> - <width>/<height>"""
         return f"[{self.__class__.__name__}] ({self.id}) {self.__x}/"\
                f"{self.__y} - {self.__width}/{self.__height}"
-    
+
     def validator(self, name, value):
         """ Check if value is an int and greater than 0 """
         if type(value) != int:
             raise TypeError(f"{name} must be an integer")
+
     @property
     def width(self):
         """ Getter for width """
