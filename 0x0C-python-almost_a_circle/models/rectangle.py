@@ -20,7 +20,11 @@ class Rectangle(Base):
         """Override to return [Rectangle] (<id>) <x>/<y> - <width>/<height>"""
         return f"[{self.__class__.__name__}] ({self.id}) {self.__x}/"\
                f"{self.__y} - {self.__width}/{self.__height}"
-
+    
+    def validator(self, name, value):
+        """ Check if value is an int and greater than 0 """
+        if type(value) != int:
+            raise TypeError(f"{name} must be an integer")
     @property
     def width(self):
         """ Getter for width """
@@ -29,9 +33,7 @@ class Rectangle(Base):
     @width.setter
     def width(self, value):
         """ setter for width """
-        if not isinstance(value, int):
-            raise TypeError("width must be an integer")
-
+        self.validator("width", value)
         if value <= 0:
             raise ValueError("width must be > 0")
         self.__width = value
@@ -44,9 +46,7 @@ class Rectangle(Base):
     @height.setter
     def height(self, value):
         """ setter for width """
-        if not isinstance(value, int):
-            raise TypeError("height must be an integer")
-
+        self.validator("height", value)
         if value <= 0:
             raise ValueError("height  must be > 0")
         self.__height = value
@@ -59,9 +59,7 @@ class Rectangle(Base):
     @x.setter
     def x(self, value):
         """ setter for x """
-        if not isinstance(value, int):
-            raise TypeError("x must be an integer")
-
+        self.validator("x", value)
         if value < 0:
             raise ValueError("x must be >= 0")
         self.__x = value
@@ -74,9 +72,7 @@ class Rectangle(Base):
     @y.setter
     def y(self, value):
         """ setter for y """
-        if not isinstance(value, int):
-            raise TypeError("y must be an integer")
-
+        self.validator("y", value)
         if value < 0:
             raise ValueError("y must be >= 0")
         self.__y = value
