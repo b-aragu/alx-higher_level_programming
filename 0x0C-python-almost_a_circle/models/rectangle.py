@@ -26,6 +26,16 @@ class Rectangle(Base):
         if type(value) != int:
             raise TypeError(f"{name} must be an integer")
 
+    def to_dictionary(self):
+        """ Return the dictionary representation of a rectangle """
+        return {
+            'id': self.id,
+            'width': self.__width,
+            'height': self.__height,
+            'x': self.__x,
+            'y': self.__y
+        }
+
     @property
     def width(self):
         """ Getter for width """
