@@ -3,6 +3,7 @@
 
 """Defines a base class for all models in our hbnb clone"""
 import json
+import csv
 
 
 class Base:
@@ -62,6 +63,42 @@ class Base:
         try:
             with open(filename, 'r') as f:
                 list_dicts = Base.from_json_string(f.read())
+                return [cls.create(**d) for d in list_dicts]
+        except IOError:
+            return []
+
+    @classmethod
+    def save_to_file_csv(cls, list_objs):
+        """ serializes list_objs to a csv file """
+        filename = cls.__name__ + ".csv"
+        with open(filename, 'w', newline="") as csvfile:
+            if list_objs is None or list_objs == []:
+                csvfile.write("[]")
+            else:
+                if cls.__name__ == "Rectangle":
+                    fieldnames = ["id", "width", "height", "x", "y"]
+                if cls.__name__ == "Square":
+                    fieldnames = ["id", "size", "x", "y"]
+                writer = csv.DictWriter(csvfile, fieldnames=fieldnames)
+                for obj in list_objs:
+                    writer.writerow(obj.to_dictionary())
+
+    @classmethod
+    def load_from_file_csv(cls):
+        """ deserializes csv file to list of instances """
+        filename = cls.__name__ + ".csv"
+        try:
+            with open(filename, 'r', newline="") as csvfile:
+                if cls.__name__ == "Rectangle":
+                    fieldnames = ["id", "width", "height", "x", "y"]
+                if cls.__name__ == "Square":
+                    fieldnames = ["id", "size", "x", "y"]
+                reader = csv.DictReader(csvfile, fieldnames=fieldnames)
+                list_dicts = []
+                for row in reader:
+                    for k, v in row.items():
+                        row[k] = int(v)
+                    list_dicts.append(row)
                 return [cls.create(**d) for d in list_dicts]
         except IOError:
             return []
