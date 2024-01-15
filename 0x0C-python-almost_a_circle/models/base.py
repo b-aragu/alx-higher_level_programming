@@ -102,3 +102,22 @@ class Base:
                 return [cls.create(**d) for d in list_dicts]
         except IOError:
             return []
+
+    @staticmethod
+    def draw(list_rectangles, list_squares):
+        """ draws the Rectangles and Squares """
+        turt = turtle.Turtle()
+        turt.screen.bgcolor("#b7312c")
+        turt.pensize(3)
+        turt.shape("turtle")
+        turt.color("#ffffff")
+        turt.penup()
+        for rect in list_rectangles:
+            turt.goto(rect.x, rect.y)
+            turt.pendown()
+            for i in range(2):
+                turt.forward(rect.width)
+                turt.left(90)
+                turt.forward(rect.height)
+                turt.left(90)
+        turtle.Screen().exitonclick()
