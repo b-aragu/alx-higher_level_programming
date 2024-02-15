@@ -1,0 +1,2 @@
+-- lIST ALL RECORDS WITH A SCORE >= 10 IN TABLE SECOND_TABLE
+SELECT score, name FROM second_table WHERE score >= 10 ORDER BY score DESC
