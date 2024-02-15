@@ -1,10 +1,10 @@
 SELECT
     city,
-    AVG(temperature) AS avg_temp
+    AVG((value * 9/5) + 32) AS avg_temp_fahrenheit
 FROM
     temperatures
 GROUP BY
     city
 ORDER BY
-    avg_temp DESC;
+    avg_temp_fahrenheit DESC;
 
