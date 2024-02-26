@@ -1,10 +1,5 @@
--- Alter table 
--- Convert the database to utf8mb4
-ALTER DATABASE hbtn_0c_0 CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci;
-
--- Convert the table to utf8mb4
-ALTER TABLE hbtn_0c_0.first_table CONVERT TO CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci;
-
--- Convert the field in the table to utf8mb4
-ALTER TABLE hbtn_0c_0.first_table MODIFY COLUMN name TEXT CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci;
-
+-- converts hbtn_0c_0 database to UTF8
+-- source https://dba.stackexchange.com/questions/8239/how-to-easily-convert-utf8-tables-to-utf8mb4-in-mysql-5-5
+USE hbtn_0c_0
+ALTER TABLE first_table
+CONVERT TO CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci;
