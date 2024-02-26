@@ -1,4 +1,2 @@
---List all row in tables
-
-USE hbtn_0c_0;
+-- List all row in tables
 SELECT * FROM first_table;
