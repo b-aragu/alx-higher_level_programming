@@ -1,5 +1,4 @@
 #!/usr/bin/node
-// 3-value_argument.js
 /*
  * Prints messaage depending on value of argument passed
  * Usage: ./3-value_argument.js <arg>
@@ -7,6 +6,7 @@
  *   - If no argument passed: "No argument" 
  *   - prints value if argument present
  */
+
 if (process.argv !== undefined) {
   console.log(process.argv[2]);
 }
