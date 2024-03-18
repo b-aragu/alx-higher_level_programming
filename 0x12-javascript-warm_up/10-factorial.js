@@ -1,18 +1,20 @@
 #!/usr/bin/node
 /*
  * 10-factorial.js
- * Prints the factorial of the first argument
+ * Prints the factorial of the first argument 
+ * use recursion
  * usage: ./10-factorial.js <number>
  */
 
-if (!isNaN(process.argv[2])) {
-  const num = parseInt(process.argv[2]);
-  let fact = 1;
-  for (let i = 1; i <= num; i++) {
-    fact *= i;
+function factorial (n) {
+  if (isNaN(n)) {
+    return 1;
   }
-  console.log(fact); 
+  else{
+  if (n <= 1) {
+    return 1;
+  } else {
+    return n * factorial(n - 1);
+  }}
 }
-else{
-  console.log(1);
-}
+console.log(factorial(process.argv[2]));
