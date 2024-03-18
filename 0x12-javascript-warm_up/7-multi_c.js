@@ -8,7 +8,7 @@ if (process.argv.length === 3) {
   const X = parseInt(process.argv[2]);
   for (let i = 0; i < X; i++) {
     console.log('C is fun');
-  }}
-else {
+  }
+} else {
   console.log('Missing number of occurrences');
 }

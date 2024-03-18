@@ -1,7 +1,7 @@
 #!/usr/bin/node
 /*
  * 10-factorial.js
- * Prints the factorial of the first argument 
+ * Prints the factorial of the first argument
  * use recursion
  * usage: ./10-factorial.js <number>
  */
@@ -15,7 +15,6 @@ function factorial (n) {
 }
 if (process.argv.length <= 2) {
   console.log(1);
-}
-else {
+} else {
   console.log(factorial(parseInt(process.argv[2])));
 }
