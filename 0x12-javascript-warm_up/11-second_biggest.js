@@ -4,7 +4,7 @@
  * Search for the second biggest number in a list of arguments
  * Usage: ./11-second_biggest.js <arguments>
  */
-if (process.argv.length <= 2) {
+if (process.argv.length <= 2 || process.argv.length === 1) {
   console.log(0);
 }
 else{
