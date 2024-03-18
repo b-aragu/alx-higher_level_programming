@@ -17,5 +17,5 @@ if (process.argv.length <= 2) {
   console.log(1);
 }
 else {
-  console.log(factorial(parseInt(process.argv[2]));
+  console.log(factorial(parseInt(process.argv[2])));
 }
